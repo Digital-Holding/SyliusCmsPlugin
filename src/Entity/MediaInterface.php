@@ -25,7 +25,8 @@ interface MediaInterface extends
     ProductsAwareInterface,
     SectionableInterface,
     ChannelsAwareInterface,
-    ContentableInterface
+    ContentableInterface,
+    PagesAwareInterface
 {
     public const IMAGE_TYPE = 'image';
     public const VIDEO_TYPE = 'video';

@@ -67,3 +67,15 @@ BitBag\SyliusCmsPlugin\Entity\Media:
                     channel_id:
                         referencedColumnName: id
                         onDelete: CASCADE
+        pages:
+            targetEntity: BitBag\SyliusCmsPlugin\Entity\PageInterface
+            joinTable:
+                name: bitbag_cms_media_pages
+                joinColumns:
+                    media_id:
+                        referencedColumnName: id
+                        onDelete: CASCADE
+                inverseJoinColumns:
+                    page_id:
+                        referencedColumnName: id
+                        onDelete: CASCADE

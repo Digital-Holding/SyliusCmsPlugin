@@ -22,6 +22,7 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\ReversedTransformer;
 
 final class MediaType extends AbstractResourceType
 {
@@ -68,6 +69,10 @@ final class MediaType extends AbstractResourceType
             ])
             ->add('translations', ResourceTranslationsType::class, [
                 'entry_type' => MediaTranslationType::class,
+            ])
+            ->add('pages', PageAutocompleteChoiceType::class, [
+                'label' => 'bitbag_sylius_cms_plugin.ui.pages',
+                'multiple' => true,
             ])
         ;
     }

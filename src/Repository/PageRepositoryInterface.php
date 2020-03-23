@@ -38,4 +38,6 @@ interface PageRepositoryInterface extends RepositoryInterface
     public function findByProduct(ProductInterface $product, string $channelCode): array;
 
     public function findByProductAndSectionCode(ProductInterface $product, string $sectionCode, string $channelCode): array;
+
+    public function findByNamePart(string $phrase, string $locale): array;
 }

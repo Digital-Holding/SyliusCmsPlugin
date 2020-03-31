@@ -12,6 +12,8 @@ declare(strict_types=1);
 
 namespace BitBag\SyliusCmsPlugin\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Sylius\Component\Core\Model\ImageInterface;
 use Sylius\Component\Resource\Model\TimestampableTrait;
 use Sylius\Component\Resource\Model\ToggleableTrait;
@@ -35,6 +37,11 @@ class Page implements PageInterface
     /** @var string */
     protected $code;
 
+    /**
+     * @var Collection|ImageInterface[]
+     */
+    protected $images;
+
     public function __construct()
     {
         $this->initializeProductsCollection();
@@ -44,6 +51,7 @@ class Page implements PageInterface
         $this->initializeChannelsCollection();
 
         $this->createdAt = new \DateTime();
+        $this->images = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -146,14 +154,40 @@ class Page implements PageInterface
         $this->getPageTranslation()->setBreadcrumb($breadcrumb);
     }
 
-    public function getImage(): ?ImageInterface
+    public function getImages(): Collection
     {
-        return $this->getPageTranslation()->getImage();
+        return $this->images;
     }
 
-    public function setImage(?ImageInterface $image): void
+    public function getImagesByType(string $type): Collection
     {
-        $this->getPageTranslation()->setImage($image);
+        return $this->images->filter(function (ImageInterface $image) use ($type): bool {
+            return $type === $image->getType();
+        });
+    }
+
+    public function hasImages(): bool
+    {
+        return !$this->images->isEmpty();
+    }
+
+    public function hasImage(ImageInterface $image): bool
+    {
+        return $this->images->contains($image);
+    }
+
+    public function addImage(ImageInterface $image): void
+    {
+        $image->setOwner($this);
+        $this->images->add($image);
+    }
+
+    public function removeImage(ImageInterface $image): void
+    {
+        if ($this->hasImage($image)) {
+            $image->setOwner(null);
+            $this->images->removeElement($image);
+        }
     }
 
     public function getTitle(): ?string

@@ -67,3 +67,11 @@ BitBag\SyliusCmsPlugin\Entity\Page:
                     channel_id:
                         referencedColumnName: id
                         onDelete: CASCADE
+
+    oneToMany:
+        images:
+            targetEntity: BitBag\SyliusCmsPlugin\Entity\PageImagesInterface
+            mappedBy: owner
+            orphanRemoval: true
+            cascade:
+                - all

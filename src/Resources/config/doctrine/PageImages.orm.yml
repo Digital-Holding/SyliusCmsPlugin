@@ -1,0 +1,11 @@
+BitBag\SyliusCmsPlugin\Entity\PageImages:
+  type: mappedSuperclass
+  table: bitbag_cms_page_images
+  manyToOne:
+    owner:
+      targetEntity: BitBag\SyliusCmsPlugin\Entity\PageInterface
+      inversedBy: images
+      joinColumn:
+        name: owner_id
+        referencedColumnName: id
+        onDelete: CASCADE

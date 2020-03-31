@@ -13,6 +13,7 @@ declare(strict_types=1);
 namespace BitBag\SyliusCmsPlugin\Entity;
 
 use Sylius\Component\Channel\Model\ChannelsAwareInterface;
+use Sylius\Component\Core\Model\ImagesAwareInterface;
 use Sylius\Component\Resource\Model\ResourceInterface;
 use Sylius\Component\Resource\Model\SlugAwareInterface;
 use Sylius\Component\Resource\Model\TimestampableInterface;
@@ -28,7 +29,8 @@ interface PageInterface extends
     TimestampableInterface,
     ChannelsAwareInterface,
     ContentableInterface,
-    SlugAwareInterface
+    SlugAwareInterface,
+    ImagesAwareInterface
 {
     public function getCode(): ?string;
 

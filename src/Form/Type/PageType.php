@@ -18,6 +18,7 @@ use Sylius\Bundle\ProductBundle\Form\Type\ProductAutocompleteChoiceType;
 use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
 use Sylius\Bundle\ResourceBundle\Form\Type\ResourceTranslationsType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 
@@ -50,6 +51,14 @@ final class PageType extends AbstractResourceType
                 'required' => false,
                 'multiple' => true,
                 'expanded' => true,
+            ])
+            ->add('images', CollectionType::class, [
+                'entry_type' => PageImagesType::class,
+                'allow_add' => true,
+                'allow_delete' => true,
+                'by_reference' => false,
+                'label' => 'bitbag_sylius_cms_plugin.ui.images',
+                'block_name' => 'entry',
             ])
         ;
     }

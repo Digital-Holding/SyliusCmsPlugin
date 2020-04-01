@@ -39,6 +39,14 @@ services:
         tags:
             - { name: form.type }
 
+    bitbag_sylius_cms_plugin.form.type.page_images:
+        class: BitBag\SyliusCmsPlugin\Form\Type\PageImagesType
+        arguments:
+            - BitBag\SyliusCmsPlugin\Entity\PageImages
+            - ['bitbag']
+        tags:
+            - { name: form.type }
+
     bitbag_sylius_cms_plugin.form.type.translation.page:
         class: BitBag\SyliusCmsPlugin\Form\Type\Translation\PageTranslationType
         arguments:

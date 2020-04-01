@@ -14,7 +14,8 @@
             {{ form_row(form.sections) }}
             {{ form_row(form.channels) }}
 
-            <a href="#" class="ui labeled button icon primary bitbag-cms-resource-preview" data-url="{{ path('bitbag_sylius_cms_plugin_admin_page_preview', {'id': form.vars.data.id}) }}">
+            <a href="#" class="ui labeled button icon primary bitbag-cms-resource-preview"
+               data-url="{{ path('bitbag_sylius_cms_plugin_admin_page_preview', {'id': form.vars.data.id}) }}">
                 <i class="eye icon"></i>
                 {{ 'bitbag_sylius_cms_plugin.ui.preview'|trans }}
             </a>
@@ -22,8 +23,18 @@
     </div>
 </div>
 
+
 <div class="ui one column stackable grid">
     <div class="column" id="bitbag-block-image">
         {{ translationFormWithSlug(form.translations, '@BitBagSyliusCmsPlugin/Page/Crud/_slugField.html.twig', page) }}
+    </div>
+</div>
+
+<div class="ui one column stackable grid">
+    <div class="column">
+        <h3 class="ui top attached header">{{ 'sylius.ui.media'|trans }}</h3>
+        <div class="ui attached segment">
+            {{ form_row(form.images, {'label': false}) }}
+        </div>
     </div>
 </div>

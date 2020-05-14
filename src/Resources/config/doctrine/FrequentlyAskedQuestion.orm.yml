@@ -33,3 +33,15 @@ BitBag\SyliusCmsPlugin\Entity\FrequentlyAskedQuestion:
                     channel_id:
                         referencedColumnName: id
                         onDelete: CASCADE
+        frequentlyAskedQuestionSections:
+            targetEntity: BitBag\SyliusCmsPlugin\Entity\FrequentlyAskedQuestionSectionInterface
+            joinTable:
+                name: bitbag_cms_faq_sections
+                joinColumns:
+                    faq_id:
+                        referencedColumnName: id
+                        onDelete: CASCADE
+                inverseJoinColumns:
+                    section_id:
+                        referencedColumnName: id
+                        onDelete: CASCADE

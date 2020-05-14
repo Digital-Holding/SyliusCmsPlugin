@@ -22,22 +22,22 @@ trait FrequentlyAskedQuestionSectionAwareTrait
         return $this->frequentlyAskedQuestionSections;
     }
 
-    public function hasFrequentlyAskedQuestionSection(SectionInterface $section): bool
+    public function hasFrequentlyAskedQuestionSection(FrequentlyAskedQuestionSectionInterface $frequentlyAskedQuestionSections): bool
     {
-        return $this->frequentlyAskedQuestionSections->contains($section);
+        return $this->frequentlyAskedQuestionSections->contains($frequentlyAskedQuestionSections);
     }
 
-    public function addFrequentlyAskedQuestionSection(SectionInterface $section): void
+    public function addFrequentlyAskedQuestionSection(FrequentlyAskedQuestionSectionInterface $frequentlyAskedQuestionSections): void
     {
-        if (false === $this->hasFrequentlyAskedQuestionSection($section)) {
-            $this->frequentlyAskedQuestionSections->add($section);
+        if (false === $this->hasFrequentlyAskedQuestionSection($frequentlyAskedQuestionSections)) {
+            $this->frequentlyAskedQuestionSections->add($frequentlyAskedQuestionSections);
         }
     }
 
-    public function removeFrequentlyAskedQuestionSection(SectionInterface $section): void
+    public function removeFrequentlyAskedQuestionSection(FrequentlyAskedQuestionSectionInterface $frequentlyAskedQuestionSections): void
     {
-        if (true === $this->hasFrequentlyAskedQuestionSection($section)) {
-            $this->frequentlyAskedQuestionSections->removeElement($section);
+        if (true === $this->hasFrequentlyAskedQuestionSection($frequentlyAskedQuestionSections)) {
+            $this->frequentlyAskedQuestionSections->removeElement($frequentlyAskedQuestionSections);
         }
     }
 }

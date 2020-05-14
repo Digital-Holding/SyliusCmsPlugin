@@ -12,9 +12,9 @@ interface FrequentlyAskedQuestionSectionAwareInterface
 
     public function getFrequentlyAskedQuestionSections(): ?Collection;
 
-    public function hasFrequentlyAskedQuestionSection(SectionInterface $section): bool;
+    public function hasFrequentlyAskedQuestionSection(FrequentlyAskedQuestionSectionInterface $frequentlyAskedQuestionSections): bool;
 
-    public function addFrequentlyAskedQuestionSection(SectionInterface $section): void;
+    public function addFrequentlyAskedQuestionSection(FrequentlyAskedQuestionSectionInterface $frequentlyAskedQuestionSections): void;
 
-    public function removeFrequentlyAskedQuestionSection(SectionInterface $section): void;
+    public function removeFrequentlyAskedQuestionSection(FrequentlyAskedQuestionSectionInterface $frequentlyAskedQuestionSections): void;
 }

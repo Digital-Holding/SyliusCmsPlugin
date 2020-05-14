@@ -1,0 +1,20 @@
+sylius_resource:
+  resources:
+    bitbag_sylius_cms_plugin.frequently_asked_question_section:
+      driver: doctrine/orm
+      classes:
+        model: BitBag\SyliusCmsPlugin\Entity\FrequentlyAskedQuestionSection
+        interface: BitBag\SyliusCmsPlugin\Entity\FrequentlyAskedQuestionSectionInterface
+        form: BitBag\SyliusCmsPlugin\Form\Type\FrequentlyAskedQuestionSectionType
+        repository: BitBag\SyliusCmsPlugin\Repository\FrequentlyAskedQuestionSectionRepository
+      translation:
+        classes:
+          model: BitBag\SyliusCmsPlugin\Entity\FrequentlyAskedQuestionSectionTranslation
+          interface: BitBag\SyliusCmsPlugin\Entity\FrequentlyAskedQuestionSectionTranslationInterface
+
+    bitbag_sylius_cms_plugin.frequently_asked_question_section_image:
+      driver: doctrine/orm
+      classes:
+        model: BitBag\SyliusCmsPlugin\Entity\FrequentlyAskedQuestionSectionImage
+        interface: BitBag\SyliusCmsPlugin\Entity\FrequentlyAskedQuestionSectionImageInterface
+        form: BitBag\SyliusCmsPlugin\Form\Type\FrequentlyAskedQuestionSectionImageType

@@ -46,6 +46,10 @@ final class FrequentlyAskedQuestionType extends AbstractResourceType
                 'multiple' => true,
                 'expanded' => true,
             ])
+            ->add('frequentlyAskedQuestionSections', FrequentlyAskedQuestionSectionAutocompleteChoiceType::class, [
+                'label' => 'bitbag_sylius_cms_plugin.ui.faq_sections',
+                'multiple' => true,
+            ])
         ;
     }
 }

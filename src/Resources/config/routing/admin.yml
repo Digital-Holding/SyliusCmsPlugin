@@ -22,6 +22,9 @@ bitbag_sylius_cms_plugin_admin_taxon:
 bitbag_sylius_cms_plugin_admin_locale:
     resource: "@BitBagSyliusCmsPlugin/Resources/config/routing/admin/locale.yml"
 
+bitbag_sylius_cms_plugin_admin_frequently_asked_question_section:
+    resource: "@BitBagSyliusCmsPlugin/Resources/config/routing/admin/frequently_asked_question_section.yml"
+
 bitbag_sylius_cms_plugin_admin_ajax_generate_page_slug:
     path: /page/generate-slug
     methods: [GET]

@@ -115,3 +115,27 @@ services:
             - "@router.default"
         tags:
             - { name: form.type }
+
+    bitbag_sylius_cms_plugin.form.type.frequently_asked_question_section:
+        class: BitBag\SyliusCmsPlugin\Form\Type\FrequentlyAskedQuestionSectionType
+        arguments:
+            - "%bitbag_sylius_cms_plugin.model.frequently_asked_question_section.class%"
+            - ['bitbag']
+        tags:
+            - { name: form.type }
+
+    bitbag_sylius_cms_plugin.form.type.translation.frequently_asked_question_section:
+        class: BitBag\SyliusCmsPlugin\Form\Type\Translation\FrequentlyAskedQuestionSectionTranslationType
+        arguments:
+            - "%bitbag_sylius_cms_plugin.model.frequently_asked_question_section_translation.class%"
+            - ['bitbag']
+        tags:
+            - { name: form.type }
+
+    bitbag_sylius_cms_plugin.form.type.frequently_asked_question_section_image:
+        class: BitBag\SyliusCmsPlugin\Form\Type\FrequentlyAskedQuestionSectionImageType
+        arguments:
+            - BitBag\SyliusCmsPlugin\Entity\FrequentlyAskedQuestionSectionImage
+            - ['bitbag']
+        tags:
+            - { name: form.type }

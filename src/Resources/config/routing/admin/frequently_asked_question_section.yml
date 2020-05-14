@@ -1,0 +1,47 @@
+bitbag_sylius_cms_plugin_admin_frequently_asked_question_section:
+    resource: |
+        alias: bitbag_sylius_cms_plugin.frequently_asked_question_section
+        section: admin
+        templates: SyliusAdminBundle:Crud
+        redirect: update
+        grid: bitbag_sylius_cms_plugin_admin_frequently_asked_question_section
+        except: ['show']
+        permission: true
+        vars:
+            all:
+                header: bitbag_sylius_cms_plugin.ui.faq_section_header
+                subheader: bitbag_sylius_cms_plugin.ui.faq_section_subheader
+                templates:
+                    form: "@BitBagSyliusCmsPlugin/FrequentlyAskedQuestionSection/Crud/_form.html.twig"
+            index:
+                icon: help
+    type: sylius.resource
+
+
+bitbag_sylius_cms_plugin_admin_frequently_asked_question_section_by_name_phrase:
+    path: /ajax/frequently-asked-question-sections/search
+    methods: [GET]
+    defaults:
+        _format: json
+        _controller: bitbag_sylius_cms_plugin.controller.frequently_asked_question_section:indexAction
+        _sylius:
+            serialization_groups: [Autocomplete]
+            permission: true
+            repository:
+                method: findByNamePart
+                arguments:
+                    phrase: $phrase
+                    locale: null
+
+bitbag_sylius_cms_plugin_admin_frequently_asked_question_section_by_code:
+    path: /ajax/frequently-asked-question-sections/code
+    methods: [GET]
+    defaults:
+        _format: json
+        _controller: bitbag_sylius_cms_plugin.controller.frequently_asked_question_section:indexAction
+        _sylius:
+            serialization_groups: [Autocomplete]
+            permission: true
+            repository:
+                method: findBy
+                arguments: [code: $code]

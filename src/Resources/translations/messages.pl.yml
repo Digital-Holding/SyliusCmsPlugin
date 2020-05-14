@@ -1,5 +1,9 @@
 bitbag_sylius_cms_plugin:
     ui:
+        faq_sections: Sekcje FAQ
+        frequently_asked_question_sections: Sekcje FAQ
+        faq_section_subheader: Zarzącaj sekcjami FAQ
+        faq_section_header: Sekcje FAQ
         blocks: Bloki
         pages: Strony
         content_management: Zarządzanie treścią

@@ -18,7 +18,7 @@ use Sylius\Component\Resource\Model\TranslationInterface;
 
 class FrequentlyAskedQuestion implements FrequentlyAskedQuestionInterface
 {
-    use ChannelsAwareTrait;
+    use ChannelsAwareTrait, FrequentlyAskedQuestionSectionAwareTrait;
     use ToggleableTrait,
         TranslatableTrait {
         __construct as private initializeTranslationsCollection;
@@ -37,6 +37,7 @@ class FrequentlyAskedQuestion implements FrequentlyAskedQuestionInterface
     {
         $this->initializeTranslationsCollection();
         $this->initializeChannelsCollection();
+        $this->initializeFrequentlyAskedQuestionSectionsCollection();
     }
 
     public function getId(): ?int

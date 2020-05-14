@@ -64,5 +64,13 @@ final class ContentManagementMenuBuilder
             ->setLabel('bitbag_sylius_cms_plugin.ui.sections')
             ->setLabelAttribute('icon', 'grid layout')
         ;
+
+        $cmsRootMenuItem
+            ->addChild('faq_sections', [
+                'route' => 'bitbag_sylius_cms_plugin_admin_frequently_asked_question_section_index',
+            ])
+            ->setLabel('bitbag_sylius_cms_plugin.ui.faq_sections')
+            ->setLabelAttribute('icon', 'grid layout')
+        ;
     }
 }

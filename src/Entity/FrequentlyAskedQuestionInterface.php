@@ -21,7 +21,8 @@ interface FrequentlyAskedQuestionInterface extends
     ResourceInterface,
     TranslatableInterface,
     ToggleableInterface,
-    ChannelsAwareInterface
+    ChannelsAwareInterface,
+    FrequentlyAskedQuestionSectionAwareInterface
 {
     public function getCode(): ?string;
 

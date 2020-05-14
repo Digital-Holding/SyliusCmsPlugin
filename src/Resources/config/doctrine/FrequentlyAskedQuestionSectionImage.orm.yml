@@ -1,0 +1,11 @@
+BitBag\SyliusCmsPlugin\Entity\FrequentlyAskedQuestionSectionImage:
+  type: mappedSuperclass
+  table: bitbag_cms_faq_section_image
+  oneToOne:
+    owner:
+      targetEntity: BitBag\SyliusCmsPlugin\Entity\FrequentlyAskedQuestionSection
+      inversedBy: image
+      cascade: [ALL]
+      joinColumn:
+        name: owner_id
+        referencedColumnName: id

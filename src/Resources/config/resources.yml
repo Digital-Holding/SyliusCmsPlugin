@@ -4,3 +4,4 @@ imports:
     - { resource: resources/frequently_asked_question.yml }
     - { resource: resources/section.yml }
     - { resource: resources/media.yml }
+    - { resource: resources/frequently_asked_question_section.yml }

@@ -1,0 +1,12 @@
+BitBag\SyliusCmsPlugin\Entity\FrequentlyAskedQuestionSectionTranslation:
+  properties:
+    name:
+      - NotBlank:
+          message: bitbag_sylius_cms_plugin.frequently_asked_question_section.name.not_blank
+          groups: [bitbag]
+      - Length:
+          min: 2
+          max: 250
+          minMessage: bitbag_sylius_cms_plugin.frequently_asked_question_section.name.min_length
+          maxMessage: bitbag_sylius_cms_plugin.frequently_asked_question_section.name.max_length
+          groups: [bitbag]

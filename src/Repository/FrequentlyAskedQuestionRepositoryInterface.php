@@ -23,4 +23,6 @@ interface FrequentlyAskedQuestionRepositoryInterface extends RepositoryInterface
     public function findEnabledOrderedByPosition(string $localeCode, string $channelCode): array;
 
     public function findOneEnabledByCode(string $code): ?FrequentlyAskedQuestionInterface;
+
+    public function findBySectionCode(string $sectionCode, ?string $localeCode): array;
 }

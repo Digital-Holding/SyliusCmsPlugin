@@ -53,4 +53,19 @@ class FrequentlyAskedQuestionRepository extends EntityRepository implements Freq
             ->getOneOrNullResult()
         ;
     }
+
+    public function findBySectionCode(string $sectionCode, ?string $localeCode): array
+    {
+        return $this->createQueryBuilder('o')
+            ->leftJoin('o.translations', 'translation')
+            ->innerJoin('o.frequentlyAskedQuestionSections', 'section')
+            ->where('translation.locale = :localeCode')
+            ->andWhere('section.code = :sectionCode')
+            ->andWhere('o.enabled = true')
+            ->setParameter('sectionCode', $sectionCode)
+            ->setParameter('localeCode', $localeCode)
+            ->getQuery()
+            ->getResult()
+            ;
+    }
 }

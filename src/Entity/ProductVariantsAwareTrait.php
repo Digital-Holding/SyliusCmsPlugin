@@ -28,14 +28,14 @@ trait ProductVariantsAwareTrait
         return $this->productVariants->contains($productVariant);
     }
 
-    public function addProduct(ProductVariantInterface $productVariant): void
+    public function addProductVariant(ProductVariantInterface $productVariant): void
     {
         if (false === $this->hasProductVariant($productVariant)) {
             $this->productVariants->add($productVariant);
         }
     }
 
-    public function removeProduct(ProductVariantInterface $productVariant): void
+    public function removeProductVariant(ProductVariantInterface $productVariant): void
     {
         if (true === $this->hasProductVariant($productVariant)) {
             $this->productVariants->removeElement($productVariant);

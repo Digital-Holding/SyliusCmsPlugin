@@ -15,7 +15,7 @@ interface ProductVariantsAwareInterface
 
     public function hasProductVariant(ProductVariantInterface $productVariant): bool;
 
-    public function addProduct(ProductVariantInterface $productVariant): void;
+    public function addProductVariant(ProductVariantInterface $productVariant): void;
 
-    public function removeProduct(ProductVariantInterface $productVariant): void;
+    public function removeProductVariant(ProductVariantInterface $productVariant): void;
 }

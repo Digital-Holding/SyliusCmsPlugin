@@ -18,7 +18,27 @@ interface MapPointInterface extends
     ChannelsAwareInterface,
     ProductVariantsAwareInterface
 {
+    public function getCode(): ?string;
+
+    public function setCode(?string $code): void;
+
     public function getName(): ?string;
 
     public function setName(?string $name): void;
+
+    public function getPhoneNumber(): ?string;
+
+    public function setPhoneNumber(?string $phoneNumber): void;
+
+    public function getAddress(): ?string;
+
+    public function setAddress(?string $address): void;
+
+    public function getCity(): ?string;
+
+    public function setCity(?string $city): void;
+
+    public function getOpeningHours(): ?string;
+
+    public function setOpeningHours(?string $openingHours): void;
 }

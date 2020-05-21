@@ -12,8 +12,8 @@ BitBag\SyliusCmsPlugin\Entity\MapPoint:
             - Length:
                   min: 2
                   max: 250
-                  minMessage: 'bitbag_sylius_cms_plugin.page.map_point.min_length'
-                  maxMessage: 'bitbag_sylius_cms_plugin.page.map_point.max_length'
+                  minMessage: 'bitbag_sylius_cms_plugin.map_point.map_point.min_length'
+                  maxMessage: 'bitbag_sylius_cms_plugin.map_point.map_point.max_length'
                   groups: ['bitbag']
         city:
             -   NotBlank:

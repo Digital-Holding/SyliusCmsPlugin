@@ -58,3 +58,10 @@ bitbag_sylius_cms_plugin:
         successfully_imported: Data has been imported.
         form_was_submitted_with_errors: "The form was submitted with following errors:"
         title: Title
+        opening_hours: Opening hours
+        city: City
+        address: Address
+        phone_number: Phone number
+        map_points: Map points
+        map_points_header: Map points
+        map_points_subheader: Manage your map points

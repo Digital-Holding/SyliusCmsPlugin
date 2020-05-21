@@ -5,3 +5,4 @@ imports:
     - { resource: resources/section.yml }
     - { resource: resources/media.yml }
     - { resource: resources/frequently_asked_question_section.yml }
+    - { resource: resources/map_point.yml }

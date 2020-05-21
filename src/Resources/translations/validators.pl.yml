@@ -72,3 +72,21 @@ bitbag_sylius_cms_plugin:
             not_blank: Name cannot be blank.
             min_length: Name must be at least {{ limit }} characters long.
             max_length: Name can not be longer than {{ limit }} characters.
+    map_point:
+        code:
+            unique: There is an existing page with this code.
+            not_blank: Code cannot be blank.
+            min_length: Code must be at least {{ limit }} characters long.
+            max_length: Code can not be longer than {{ limit }} characters.
+        name:
+            not_blank: Name cannot be blank.
+            min_length: Name must be at least {{ limit }} characters long.
+            max_length: Name can not be longer than {{ limit }} characters.
+        phone_number:
+            not_blank: Phone number cannot be blank.
+        address:
+            not_blank: Address cannot be blank.
+        city:
+            not_blank: City cannot be blank.
+        opening_hours:
+            not_blank: Opening Hours cannot be blank.

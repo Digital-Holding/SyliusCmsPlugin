@@ -1,0 +1,35 @@
+BitBag\SyliusCmsPlugin\Entity\MapPoint:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+              fields: [code]
+              message: 'bitbag_sylius_cms_plugin.map_point.code.unique'
+              groups: ['bitbag']
+    properties:
+        code:
+            - NotBlank:
+                  message: 'bitbag_sylius_cms_plugin.map_point.code.not_blank'
+                  groups: ['bitbag']
+            - Length:
+                  min: 2
+                  max: 250
+                  minMessage: 'bitbag_sylius_cms_plugin.page.map_point.min_length'
+                  maxMessage: 'bitbag_sylius_cms_plugin.page.map_point.max_length'
+                  groups: ['bitbag']
+        city:
+            -   NotBlank:
+                    message: 'bitbag_sylius_cms_plugin.map_point.city.not_blank'
+                    groups: ['bitbag']
+        phoneNumber:
+            -   NotBlank:
+                    message: 'bitbag_sylius_cms_plugin.map_point.phone_number.not_blank'
+                    groups: ['bitbag']
+        openingHours:
+            -   NotBlank:
+                    message: 'bitbag_sylius_cms_plugin.map_point.opening_hours.not_blank'
+                    groups: ['bitbag']
+        address:
+            -   NotBlank:
+                    message: 'bitbag_sylius_cms_plugin.map_point.address.not_blank'
+                    groups: ['bitbag']
+        translations:
+            - Valid: ~

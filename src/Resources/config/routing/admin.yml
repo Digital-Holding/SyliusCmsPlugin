@@ -25,6 +25,9 @@ bitbag_sylius_cms_plugin_admin_locale:
 bitbag_sylius_cms_plugin_admin_frequently_asked_question_section:
     resource: "@BitBagSyliusCmsPlugin/Resources/config/routing/admin/frequently_asked_question_section.yml"
 
+bitbag_sylius_cms_plugin_admin_map_point:
+    resource: "@BitBagSyliusCmsPlugin/Resources/config/routing/admin/map_point.yml"
+
 bitbag_sylius_cms_plugin_admin_ajax_generate_page_slug:
     path: /page/generate-slug
     methods: [GET]

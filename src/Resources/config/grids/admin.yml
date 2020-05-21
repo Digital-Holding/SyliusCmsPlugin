@@ -5,3 +5,4 @@ imports:
     - { resource: "@BitBagSyliusCmsPlugin/Resources/config/grids/admin/section.yml" }
     - { resource: "@BitBagSyliusCmsPlugin/Resources/config/grids/admin/media.yml" }
     - { resource: "@BitBagSyliusCmsPlugin/Resources/config/grids/admin/frequently_asked_question_section.yml" }
+    - { resource: "@BitBagSyliusCmsPlugin/Resources/config/grids/admin/map_point.yml" }

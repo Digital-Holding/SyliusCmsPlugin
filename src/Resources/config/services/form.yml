@@ -139,3 +139,19 @@ services:
             - ['bitbag']
         tags:
             - { name: form.type }
+
+    bitbag_sylius_cms_plugin.form.type.map_point:
+        class: BitBag\SyliusCmsPlugin\Form\Type\MapPointType
+        arguments:
+            - "%bitbag_sylius_cms_plugin.model.map_point.class%"
+            - ['bitbag']
+        tags:
+            - { name: form.type }
+
+    bitbag_sylius_cms_plugin.form.type.translation.map_point:
+        class: BitBag\SyliusCmsPlugin\Form\Type\Translation\MapPointTranslationType
+        arguments:
+            - "%bitbag_sylius_cms_plugin.model.map_point_translation.class%"
+            - ['bitbag']
+        tags:
+            - { name: form.type }

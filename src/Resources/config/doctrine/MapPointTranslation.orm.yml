@@ -1,0 +1,14 @@
+BitBag\SyliusCmsPlugin\Entity\MapPointTranslation:
+    type: mappedSuperclass
+    table: bitbag_cms_map_point_translation
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            column: name
+            type: string
+            nullable: true

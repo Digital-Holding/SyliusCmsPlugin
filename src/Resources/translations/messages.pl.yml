@@ -39,3 +39,10 @@ bitbag_sylius_cms_plugin:
         sections_subheader: Zarządzaj sekcjami
         position: Pozycja
         title: Tytuł
+        opening_hours: Godziny otwarcia
+        city: Miasto
+        address: Adres
+        phone_number: Telefon
+        map_points: Punkty mapy kontaktowej
+        map_points_header: Punkty mapy kontaktowej
+        map_points_subheader: Zarządzaj punktami mapy kontaktowej

@@ -43,6 +43,18 @@ BitBag\SyliusCmsPlugin\Entity\Page:
                     product_id:
                         referencedColumnName: id
                         onDelete: CASCADE
+        productVariants:
+            targetEntity: Sylius\Component\Product\Model\ProductVariantInterface
+            joinTable:
+                name: bitbag_cms_page_product_variants
+                joinColumns:
+                    page_id:
+                        referencedColumnName: id
+                        onDelete: CASCADE
+                inverseJoinColumns:
+                    product_variant_id:
+                        referencedColumnName: id
+                        onDelete: CASCADE
         sections:
             targetEntity: BitBag\SyliusCmsPlugin\Entity\SectionInterface
             joinTable:

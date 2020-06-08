@@ -30,7 +30,8 @@ interface PageInterface extends
     ChannelsAwareInterface,
     ContentableInterface,
     SlugAwareInterface,
-    ImagesAwareInterface
+    ImagesAwareInterface,
+    ProductVariantsAwareInterface
 {
     public function getCode(): ?string;
 

@@ -65,3 +65,6 @@ bitbag_sylius_cms_plugin:
         map_points: Map points
         map_points_header: Map points
         map_points_subheader: Manage your map points
+        info_articles: Info articles
+        info_articles_header: Info Articles
+        info_articles_subheader: Manage your info articles

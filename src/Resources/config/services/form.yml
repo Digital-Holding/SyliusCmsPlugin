@@ -155,3 +155,19 @@ services:
             - ['bitbag']
         tags:
             - { name: form.type }
+
+    bitbag_sylius_cms_plugin.form.type.info_article:
+        class: BitBag\SyliusCmsPlugin\Form\Type\InfoArticleType
+        arguments:
+            - "%bitbag_sylius_cms_plugin.model.info_article.class%"
+            - ['bitbag']
+        tags:
+            - { name: form.type }
+
+    bitbag_sylius_cms_plugin.form.type.translation.info_article:
+        class: BitBag\SyliusCmsPlugin\Form\Type\Translation\InfoArticleTranslationType
+        arguments:
+            - "%bitbag_sylius_cms_plugin.model.info_article_translation.class%"
+            - ['bitbag']
+        tags:
+            - { name: form.type }

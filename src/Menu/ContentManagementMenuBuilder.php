@@ -78,7 +78,15 @@ final class ContentManagementMenuBuilder
                 'route' => 'bitbag_sylius_cms_plugin_admin_map_point_index',
             ])
             ->setLabel('bitbag_sylius_cms_plugin.ui.map_points')
-            ->setLabelAttribute('icon', 'grid layout')
+            ->setLabelAttribute('icon', 'map marker alternate')
+        ;
+
+        $cmsRootMenuItem
+            ->addChild('info_article', [
+                'route' => 'bitbag_sylius_cms_plugin_admin_info_article_index',
+            ])
+            ->setLabel('bitbag_sylius_cms_plugin.ui.info_articles')
+            ->setLabelAttribute('icon', 'info')
         ;
     }
 }

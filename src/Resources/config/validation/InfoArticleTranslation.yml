@@ -1,0 +1,34 @@
+BitBag\SyliusCmsPlugin\Entity\InfoArticleTranslation:
+    properties:
+        name:
+            - NotBlank:
+                  message: bitbag_sylius_cms_plugin.info_article.name.not_blank
+                  groups: [bitbag]
+            - Length:
+                  min: 2
+                  max: 250
+                  minMessage: bitbag_sylius_cms_plugin.info_article.name.min_length
+                  maxMessage: bitbag_sylius_cms_plugin.info_article.name.max_length
+                  groups: [bitbag]
+        metaKeywords:
+            - Length:
+                  min: 2
+                  max: 1000
+                  minMessage: bitbag_sylius_cms_plugin.info_article.meta_keywords.min_length
+                  maxMessage: bitbag_sylius_cms_plugin.info_article.meta_keywords.max_length
+                  groups: [bitbag]
+        metaDescription:
+            - Length:
+                  min: 2
+                  max: 5000
+                  minMessage: bitbag_sylius_cms_plugin.info_article.meta_description.min_length
+                  maxMessage: bitbag_sylius_cms_plugin.info_article.meta_description.max_length
+                  groups: [bitbag]
+        content:
+            - NotBlank:
+                  message: bitbag_sylius_cms_plugin.info_article.content.not_blank
+                  groups: [bitbag]
+            - Length:
+                  min: 2
+                  minMessage: bitbag_sylius_cms_plugin.info_article.content.min_length
+                  groups: [bitbag]

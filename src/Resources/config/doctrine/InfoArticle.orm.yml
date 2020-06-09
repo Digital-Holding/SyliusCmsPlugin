@@ -36,7 +36,7 @@ BitBag\SyliusCmsPlugin\Entity\InfoArticle:
             joinTable:
                 name: bitbag_cms_info_article_channels
                 joinColumns:
-                    page_id:
+                    info_article_id:
                         referencedColumnName: id
                         onDelete: CASCADE
                 inverseJoinColumns:

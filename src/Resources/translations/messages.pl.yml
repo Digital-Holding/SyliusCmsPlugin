@@ -17,6 +17,7 @@ bitbag_sylius_cms_plugin:
         pages_header: Strony
         pages_subheader: Zarządzaj swoimi stronami
         products: Produkty
+        taxons: Kategorie
         page_related_products: Produkty powiązane ze stroną
         name: Nazwa
         slug: Link
@@ -38,6 +39,27 @@ bitbag_sylius_cms_plugin:
         sections_header: Sekcje
         sections_subheader: Zarządzaj sekcjami
         position: Pozycja
+        channels: Kanały dystrybucji
+        preview: Podgląd
+        download: Pobierz
+        name_when_linked: Linkowana nazwa
+        description_when_linked: Linkowany opis
+        media: Media
+        media_header: Media
+        media_subheader: Zarządzaj zasobami cyfrowymi
+        type: Typ
+        file: Plik
+        alt: Alt
+        description: Opis
+        file_provider: Plik
+        image_provider: Zdjęcie
+        video_provider: Wideo
+        read_more: Więcej
+        breadcrumb: Breadcrumb
+        import: Import
+        csv_file: Plik CSV
+        successfully_imported: Dane zostały zaimportowane.
+        form_was_submitted_with_errors: "Formularz został przesłany z następującymi błędami:"
         title: Tytuł
         opening_hours: Godziny otwarcia
         city: Miasto
@@ -46,3 +68,6 @@ bitbag_sylius_cms_plugin:
         map_points: Punkty mapy kontaktowej
         map_points_header: Punkty mapy kontaktowej
         map_points_subheader: Zarządzaj punktami mapy kontaktowej
+        info_articles: Artykuły informacyjne
+        info_articles_header: Artykuły informacyjne
+        info_articles_subheader: Zarządzaj artykułami informacyjnymi

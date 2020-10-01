@@ -71,3 +71,6 @@ bitbag_sylius_cms_plugin:
         info_articles: Info articles
         info_articles_header: Info Articles
         info_articles_subheader: Manage your info articles
+    form:
+        map_point:
+            address_help: Adres should be in format 'City, postcode, street and house number.'

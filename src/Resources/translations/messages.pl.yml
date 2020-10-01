@@ -71,3 +71,6 @@ bitbag_sylius_cms_plugin:
         info_articles: Artykuły informacyjne
         info_articles_header: Artykuły informacyjne
         info_articles_subheader: Zarządzaj artykułami informacyjnymi
+    form:
+        map_point:
+            address_help: Adres powinien być w formacie 'Miasto, kod pocztowy, ulica oraz numer mieszkania/domu.'
